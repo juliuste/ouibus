@@ -1,7 +1,7 @@
 {
   "name": "ouibus",
   "description": "Client for the OUIBUS API",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "idbus",
     "ouibus",
@@ -18,7 +18,8 @@
   "bugs": "https://github.com/juliuste/ouibus/issues",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "lib/*"
   ],
   "dependencies": {
     "got": "^6.7.1",
