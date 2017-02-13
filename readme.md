@@ -32,7 +32,7 @@ ouibus.stations().then(…)
 
 would give you
 
-```json
+```js
 [{
 	"id": "3",
 	"name": "Gérone",
@@ -72,7 +72,7 @@ ouibus.routes(
 
 would give you
 
-```json
+```js
 [{
 	"id": "2399345",
 	"from": "1",
