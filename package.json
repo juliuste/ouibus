@@ -1,0 +1,38 @@
+{
+  "name": "ouibus",
+  "description": "Client for the OUIBUS API",
+  "version": "0.1.0",
+  "keywords": [
+    "idbus",
+    "ouibus",
+    "bus",
+    "coach",
+    "api",
+    "client",
+    "sncf",
+    "europe"
+  ],
+  "author": "Julius Tens <mail@juliustens.de>",
+  "homepage": "https://github.com/juliuste/ouibus",
+  "repository": "juliuste/ouibus",
+  "bugs": "https://github.com/juliuste/ouibus/issues",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "got": "^6.7.1",
+    "moment-timezone": "^0.5.11"
+  },
+  "devDependencies": {
+    "tape": "^4.6.3"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "prepublish": "npm test"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "MIT"
+}
