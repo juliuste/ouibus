@@ -1,5 +1,7 @@
 # ouibus
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/ouibus.svg)](https://greenkeeper.io/)
+
 JavaScript client for the [OUIBUS](http://www.ouibus.com/) (formerly known as idBUS) API.
 
 [![npm version](https://img.shields.io/npm/v/ouibus.svg)](https://www.npmjs.com/package/ouibus)
