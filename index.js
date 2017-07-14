@@ -1,6 +1,6 @@
 'use strict'
 
 const stations = require('./lib/stations')
-const routes = require('./lib/routes')
+const journeys = require('./lib/journeys')
 
-module.exports = {stations, routes}
+module.exports = {stations, journeys}
