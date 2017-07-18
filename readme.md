@@ -20,7 +20,7 @@ npm install ouibus
 const ouibus = require('ouibus')
 ```
 
-The `ouibus` module bundles two methods: `stations()` and `routes()`.
+The `ouibus` module bundles two methods: `stations()` and `journeys()`.
 
 ### stations()
 
@@ -34,27 +34,25 @@ would give you
 
 ```js
 [{
+	"type": "station",
 	"id": "3",
 	"name": "Gérone",
 	"timezone": "Europe/Madrid",
 	"address": "Plaça Espanya 2 17002 Girona",
-	"position": {
-		"longitude": "2.817476",
-		"latitude": "41.97901"
-	},
-	"destinations": [16,29,134,35,103,112,146,116,118,149,150],
+	"coordinates": { "longitude": "2.817476", "latitude": "41.97901" },
+	"destinations": [112,146,149,128,29,134,301,302,18,137,303,15,300,34,118,95,116,76,21,136,103,41,299,16,35,306,307,14,13,309],
 	"stops": […] // only contained by meta-stations (like "Paris - Tous les arrêts"), list of subordinate stops)
 }, …]
 
 ```
 
-### routes(fromID, toID, date, opt)
+### journeys(originID, destinationID, date, opt)
 
-Find routes for a given date (always returns results for the entire day). Returns a `Promise` that resolves in a list of matching routes.
+Find journeys for a given date (always returns results for the entire day). Returns a `Promise` that resolves in a list of matching journeys.
 
 ```js
-ouibus.routes(fromID, toID, date, opt).then(…)
-ouibus.routes(
+ouibus.journeys(originID, destinationID, date, opt).then(…)
+ouibus.journeys(
 	90, // Paris
 	13, // Montpellier
 	new Date(),
@@ -74,22 +72,34 @@ would give you
 
 ```js
 [{
-	"id": "2399345",
-	"from": "1",
-	"to": "13",
-	"departure": "2017-02-14T21:30:00.000Z", // Date() object
-	"arrival": "2017-02-15T14:45:00.000Z", // Date() object
+	"type": "journey",
+	"id": "5133615",
+	"origin": "51",
+	"destination": "13",
+	"departure": "2017-07-19T19:00:00.000Z", // Date() object
+	"arrival": "2017-07-20T13:40:00.000Z", // Date() object
 	"price": {
-		"normal": {"value":44, "currency": "EUR"},
-		"promo": null // would look like 'normal' if there was a promotion
+		"amount": 42,
+		"currency": "EUR",
+		"fares": [
+			{
+				"price": {
+					"amount": 42,
+					"currency": "EUR"
+				},
+				"model": "normal"
+			},
+			// Here would be another entry which looks like
+			// the one above if there was a promotion.
+		]
 	},
 	"available": true,
-	"parts": [{
-		"from": "1",
-		"to": "29",
-		"departure": "2017-02-14T21:30:00.000Z", // Date() object
-		"arrival": "2017-02-15T05:30:00.000Z", // Date() object
-		"busNumber": "5041"
+	"legs": [{
+		"origin": "51",
+		"destination": "15",
+		"departure": "2017-07-19T19:00:00.000Z", // Date() object
+		"arrival": "2017-07-20T06:35:00.000Z", // Date() object
+		"busNumber": "5703"
 	}, …]}
 , …]
 ```
