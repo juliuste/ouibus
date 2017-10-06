@@ -26,7 +26,7 @@ The `ouibus` module bundles two methods: `stations()` and `routes()`.
 
 Ouibus network. Returns a `Promise` that resolves in a list of all stations:
 
-```js 
+```js
 ouibus.stations().then(…)
 ```
 
