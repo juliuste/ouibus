@@ -1,7 +1,5 @@
 # ouibus
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/ouibus.svg)](https://greenkeeper.io/)
-
 JavaScript client for the [OUIBUS](http://www.ouibus.com/) (formerly known as idBUS) API.
 
 [![npm version](https://img.shields.io/npm/v/ouibus.svg)](https://www.npmjs.com/package/ouibus)
@@ -28,7 +26,7 @@ The `ouibus` module bundles two methods: `stations()` and `routes()`.
 
 Ouibus network. Returns a `Promise` that resolves in a list of all stations:
 
-```js 
+```js
 ouibus.stations().then(…)
 ```
 
