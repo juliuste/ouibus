@@ -22,7 +22,7 @@
     "lib/*"
   ],
   "dependencies": {
-    "got": "^7.1.0",
+    "got": "^8.0.3",
     "moment-timezone": "^0.5.11"
   },
   "devDependencies": {
