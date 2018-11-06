@@ -7,7 +7,7 @@ JavaScript client for the [OUIBUS](http://www.ouibus.com/) (formerly known as id
 [![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/ouibus.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/juliuste/ouibus.svg)](https://david-dm.org/juliuste/ouibus)
 [![dev dependency status](https://img.shields.io/david/dev/juliuste/ouibus.svg)](https://david-dm.org/juliuste/ouibus#info=devDependencies)
-[![license](https://img.shields.io/github/license/juliuste/ouibus.svg?style=flat)](LICENSE)
+[![license](https://img.shields.io/github/license/juliuste/ouibus.svg?style=flat)](license)
 [![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
 ## Installation
