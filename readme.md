@@ -35,17 +35,27 @@ ouibus.stations().then(…)
 would give you
 
 ```js
-[{
-	"type": "station",
-	"id": "3",
-	"name": "Gérone",
-	"timezone": "Europe/Madrid",
-	"address": "Plaça Espanya 2 17002 Girona",
-	"coordinates": { "longitude": "2.817476", "latitude": "41.97901" },
-	"destinations": [112,146,149,128,29,134,301,302,18,137,303,15,300,34,118,95,116,76,21,136,103,41,299,16,35,306,307,14,13,309],
-	"stops": […] // only contained by meta-stations (like "Paris - Tous les arrêts"), list of subordinate stops)
-}, …]
-
+[
+	{
+		"address": "1 Avenue Louis le Débonnaire 57000 Metz",
+		"destinations": [
+			"415",
+			"416"
+			// …
+		],
+		"id": "47",
+		"location": {
+			"latitude": 49.110633,
+			"longitude": 6.183319,
+			"timezone": "Europe/Paris",
+			"type": "location"
+		},
+		"name": "Metz",
+		"timezone": "Europe/Paris",
+		"type": "station"
+	}
+	// …
+]
 ```
 
 ### journeys(originID, destinationID, date, opt)

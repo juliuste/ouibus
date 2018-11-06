@@ -3,15 +3,19 @@
 const tapeWithoutPromise = require('tape')
 const addPromiseSupport = require('tape-promise').default
 const tape = addPromiseSupport(tapeWithoutPromise)
+const validate = require('validate-fptf')()
 const ouibus = require('.')
 
 tape('ouibus.stations', async (t) => {
 	const stations = await ouibus.stations()
-	t.false(stations.length === 0, 'stations count')
-	t.true(stations[0].type, 'station type')
-	t.true(stations[0].id, 'station id')
-	t.true(stations[0].name, 'station name')
-	t.true(stations[0].destinations, 'station destinations')
+	t.ok(stations.length > 50, 'stations count')
+	for (let station of stations) {
+		t.doesNotThrow(() => validate(station), 'station valid')
+		t.ok(Array.isArray(station.destinations), 'station destinations')
+		for (let destination of station.destinations) {
+			t.doesNotThrow(() => validate(destination), 'station destination valid')
+		}
+	}
 	t.end()
 })
 
