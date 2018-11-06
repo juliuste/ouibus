@@ -7,7 +7,7 @@ const ouibus = require('.')
 
 tape('ouibus.stations', async (t) => {
 	const stations = await ouibus.stations()
-	t.false(stations.length == 0, 'stations count')
+	t.false(stations.length === 0, 'stations count')
 	t.true(stations[0].type, 'station type')
 	t.true(stations[0].id, 'station id')
 	t.true(stations[0].name, 'station name')
@@ -36,7 +36,7 @@ tape('ouibus.stations', (t) => {
 	})
 =======
 tape('ouibus.journeys', async (t) => {
-	const journeys = await ouibus.journeys(90, 13, new Date(+new Date()+1000*60*60*24))
+	const journeys = await ouibus.journeys(90, 13, new Date(+new Date() + 1000 * 60 * 60 * 24))
 	t.true(journeys.length, 'journeys count')
 	t.true(journeys[0].type, 'journey type')
 	t.true(journeys[0].id, 'journey id')
