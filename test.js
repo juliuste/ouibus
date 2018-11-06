@@ -1,7 +1,9 @@
 'use strict'
 
-const tape = require('tape')
-const ouibus = require('./index')
+const tapeWithoutPromise = require('tape')
+const addPromiseSupport = require('tape-promise').default
+const tape = addPromiseSupport(tapeWithoutPromise)
+const ouibus = require('.')
 
 tape('ouibus.stations', (t) => {
 	ouibus.stations().then((stations) => {
