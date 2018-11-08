@@ -83,37 +83,61 @@ ouibus.journeys(
 would give you
 
 ```js
-[{
-	"type": "journey",
-	"id": "5133615",
-	"origin": "51",
-	"destination": "13",
-	"departure": "2017-07-19T19:00:00.000Z", // Date() object
-	"arrival": "2017-07-20T13:40:00.000Z", // Date() object
-	"price": {
-		"amount": 42,
-		"currency": "EUR",
-		"fares": [
+[
+	{
+		"available": true,
+		"id": "30702067",
+		"legs": [
 			{
-				"price": {
-					"amount": 42,
-					"currency": "EUR"
+				"arrival": "2018-11-10T09:40:00+01:00",
+				"departure": "2018-11-09T19:10:00+01:00",
+				"destination": "5",
+				"line": {
+					"id": "5751",
+					"mode": "bus",
+					"name": "5751",
+					"public": true,
+					"type": "line"
 				},
-				"model": "normal"
+				"mode": "bus",
+				"operator": "ouibus",
+				"origin": "1",
+				"public": true
 			},
-			// Here would be another entry which looks like
-			// the one above if there was a promotion.
-		]
-	},
-	"available": true,
-	"legs": [{
-		"origin": "51",
-		"destination": "15",
-		"departure": "2017-07-19T19:00:00.000Z", // Date() object
-		"arrival": "2017-07-20T06:35:00.000Z", // Date() object
-		"busNumber": "5703"
-	}, …]}
-, …]
+			{
+				"arrival": "2018-11-10T16:35:00+01:00",
+				"departure": "2018-11-10T11:10:00+01:00",
+				"destination": "13",
+				"line": {
+					"id": "5868",
+					"mode": "bus",
+					"name": "5868",
+					"public": true,
+					"type": "line"
+				},
+				"mode": "bus",
+				"operator": "ouibus",
+				"origin": "5",
+				"public": true
+			}
+		],
+		"price": {
+			"amount": 62,
+			"currency": "EUR",
+			"fares": [
+				{
+					"model": "normal",
+					"price": {
+						"amount": 62,
+						"currency": "EUR"
+					}
+				}
+			]
+		},
+		"type": "journey"
+	}
+	// …
+]
 ```
 
 ## Contributing
