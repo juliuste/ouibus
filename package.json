@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "got": "^6.7.1",
-    "moment-timezone": "^0.5.11"
+    "moment-timezone": "^0.5.30"
   },
   "devDependencies": {
     "depcheck": "^0.6.11",
