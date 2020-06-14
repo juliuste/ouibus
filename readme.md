@@ -1,5 +1,7 @@
 # ouibus
 
+**WARNING: THIS PACKAGE IS UNMAINTAINED AND PROBABLY WON'T FUNCTION CORRECTLY ANYMORE.**
+
 JavaScript client for the [OUIBUS](http://www.ouibus.com/) (formerly known as idBUS) API. Inofficial, using endpoints by *OUIBUS*. Ask them for permission before using this module in production.
 
 [![npm version](https://img.shields.io/npm/v/ouibus.svg)](https://www.npmjs.com/package/ouibus)
